@@ -9,5 +9,10 @@ function validateDate(day, month, year) {
     } else {
         return false;
     }
+    if (year % 4 === 0 && day <=29) {
+      return true;
+    } else {
+      return false;
+  }
 }
-console.log(validateDate(31,9,2002))
+console.log(validateDate(30,9,2003))
