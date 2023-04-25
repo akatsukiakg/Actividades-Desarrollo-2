@@ -10,9 +10,9 @@ function validateDate(day, month, year) {
         return false;
     }
     if (year % 4 === 0 && day <=29) {
-      return true;
+       return true;
     } else {
-      return false;
+       return false;
   }
 }
 console.log(validateDate(30,9,2003))
