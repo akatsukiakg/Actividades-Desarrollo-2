@@ -1,0 +1,56 @@
+function loopDePares(numero) {
+  for (let i = 0; i <= 100; i++) {
+    console.log(i);
+    if (i % 2 === 0) {
+      console.log(`El número ${i} es par`);
+    }
+  }
+}
+function nuevoArreglo(numero) {
+  const arreglo = [];
+  for (let i = 1; i <= numero; i++) {
+    arreglo.push(i);
+  }
+  return arreglo;
+}
+function oneProperty(arreglo, propiedad) {
+  const nuevoArreglo = [];
+  for (const obj of arreglo) {
+    const newObj = {};
+    newObj[propiedad] = obj[propiedad];
+    nuevoArreglo.push(newObj);
+  }
+  return nuevoArreglo;
+}
+function summation(numero) {
+  let sumatoria = 0;
+  for (let i = 1; i <= numero; i++) {
+    sumatoria += i;
+  }
+  return sumatoria;
+}
+function middleCharacter(string) {
+  const length = string.length;
+  const middleIndex = Math.floor(length / 2);
+
+  if (length % 2 === 0) {
+    return string.slice(middleIndex - 1, middleIndex + 1);
+  } else {
+    return string[middleIndex];
+  }
+}
+loopDePares(3);
+const arreglo1 = nuevoArreglo(5);
+console.log(arreglo1);
+const arreglo2 = nuevoArreglo(10);
+console.log(arreglo2);
+const arreglo = [{ name: "lucas", edad: 20 }, { name: "santi", edad: 22 }];
+const arregloEdad = oneProperty(arreglo, "edad");
+console.log(arregloEdad);
+const arregloName = oneProperty(arreglo, "name");
+console.log(arregloName);
+console.log(summation(3));
+console.log(summation(8));
+console.log(middleCharacter("plataforma5"));
+console.log(middleCharacter("hola"));
+console.log(middleCharacter("cosas"));
